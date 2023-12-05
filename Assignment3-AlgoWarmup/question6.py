@@ -1,12 +1,9 @@
 # %%
 # More Efficient Method
 class Solution():
-    def find_last_digit_of_sum_of_square(self, m, n):
+    def find_last_digit_of_sum_of_square(self, n):
         pisano_len = 60
         n %= pisano_len
-        if n < m:
-            n += 60
-
         first = 0
         sec = 1
         result = 0
@@ -21,7 +18,7 @@ class Solution():
     
 if __name__ == "__main__":
     sol = Solution()
-    m, n = map(int, input().split())
-    print(sol.find_last_digit_of_sum_of_square(m, n))
+    n = int(input())
+    print(sol.find_last_digit_of_sum_of_square(n))
 
-# %%
+    # %%
